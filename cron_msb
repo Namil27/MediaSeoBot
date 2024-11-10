@@ -1,0 +1,5 @@
+# Запускаем week_massage.py в 12 утра по понедельникам
+0 12 * * 1 env TELEGRAM_BOT_TOKEN="your_telebot_api_key" MAIN_CHAT_ID="your_chat_id" /usr/local/bin/python3 /app/bot/week_massage.py >> /var/log/cron.log 2>&1
+
+# Запускаем month_massage.py первым числом каждого месяца в 9 утра
+0 9 1 * * env TELEGRAM_BOT_TOKEN="your_telebot_api_key" MAIN_CHAT_ID="your_chat_id" /usr/local/bin/python3 /app/bot/month_massage.py >> /var/log/cron.log 2>&1
